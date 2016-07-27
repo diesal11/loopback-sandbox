@@ -35,5 +35,9 @@
   "Person": {
     "dataSource": "db",
     "public": true
+  },
+  "PersonMongo": {
+    "dataSource": "mongo",
+    "public": true
   }
 }

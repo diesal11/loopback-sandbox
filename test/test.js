@@ -31,13 +31,13 @@ describe('MongoDB Model ID Bug', function() {
 
     request(app)
       .get(url)
-      .expect(200, function(err, res) {
+      .expect(404, function(err, res) {
         console.log(res.body.error.message);
         done(err);
       });
   });
 
-  // This should successfully retrieve the model and does (phew!)
+  // This should successfully retrieve the model and doesn't :(
   it('Should get the Person (REST findAll)', function(done) {
     const url = baseUrl + personMongoUrl;
     console.log('Testing GET:' + url)
